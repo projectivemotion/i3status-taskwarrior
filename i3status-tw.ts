@@ -43,13 +43,13 @@ function append_status(itemlist){
 }
 
 
-if(Boolean(process.stdin.isTTY))
+if(Boolean((<any>process.stdin).isTTY))
 {
     console.log(get_tw_status());
-    return;
+    process.exit(0);
 }
 
-process.stdin.on('readable', (d) => {
+process.stdin.on('readable', () => {
     var d = process.stdin.read();
     if(d === null) return;
 
