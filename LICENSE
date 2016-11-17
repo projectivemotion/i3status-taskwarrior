@@ -1,24 +1,3 @@
-i3status-taskwarrior
-====================
-
-## Build
-    git clone https://github.com/projectivemotion/i3status-taskwarrior.git
-    cd i3status-taskwarrior && npm install && tsc --project .
-
-
-## i3 Configuration
-    ## in i3status config
-    bar {
-            status_command  i3status -c ~/.config/i3/.i3status.conf | node ~/projects/js/i3status-taskwarrior/i3status-tw.js | ~/bin/i3statusphp
-    }
-    
-## Examples
-    /tmp/i3status-taskwarrior $ node i3status-tw.js 
-    Active:  [ 244 ] My project ( 41 minutes )
-    
-    /tmp/i3status-taskwarrior $ i3status -c ~/.config/i3/.i3status.conf | node i3status-tw.js 
-    
-## License
 The MIT License (MIT)
 
 Copyright (c) 2016 Amado Martinez
