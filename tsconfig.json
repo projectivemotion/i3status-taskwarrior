@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "noImplicitAny": false,
+    "sourceMap": false
+  },
+  "files": [
+    "lib/taskwarrior.ts",
+    "i3status-tw.ts"
+  ]
+}

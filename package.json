@@ -1,0 +1,7 @@
+{
+  "name": "i3status-taskwarrior",
+  "version": "0.0.1",
+  "dependencies" : {
+    "moment" : "2.16.0"
+  }
+}
