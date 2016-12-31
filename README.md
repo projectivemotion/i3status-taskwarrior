@@ -1,10 +1,18 @@
 i3status-taskwarrior
 ====================
+This node utility will display currently active taskwarrior task in json or plaintext format so that it can be displayed in i3status .
 
-## Build
-    git clone https://github.com/projectivemotion/i3status-taskwarrior.git
-    cd i3status-taskwarrior && npm install && tsc --project .
+## Usage
 
+    $ git clone https://github.com/projectivemotion/i3status-taskwarrior.git
+    
+    /tmp/i3status-taskwarrior/build $ node i3status-tw.js json
+    {"instance":"","name":"Node","color":"#fcc0cf","markup":"none","full_text":"Active:  [ 244 ] My project ( 14 hours )"}
+
+    /tmp/i3status-taskwarrior/build $ node i3status-tw.js 
+    Active:  [ 244 ] My project ( 41 minutes )
+    
+    /tmp/i3status-taskwarrior/build $ i3status -c ~/.config/i3/.i3status.conf | node i3status-tw.js 
 
 ## i3 Configuration
     ## in i3 config
@@ -12,15 +20,9 @@ i3status-taskwarrior
             status_command  i3status -c ~/.config/i3/.i3status.conf | node ~/projects/js/i3status-taskwarrior/build/i3status-tw.js
     }
     
-## Examples
-    /tmp/i3status-taskwarrior/build $ node i3status-tw.js json
-    {"instance":"","name":"Node","color":"#fcc0cf","markup":"none","full_text":"Active:  [ 202 ] Coding ( 14 hours )"}
+## Building
+    npm install && tsc --project .
 
-    /tmp/i3status-taskwarrior/build $ node i3status-tw.js 
-    Active:  [ 244 ] My project ( 41 minutes )
-    
-    /tmp/i3status-taskwarrior $ i3status -c ~/.config/i3/.i3status.conf | node build/i3status-tw.js 
-    
 ## License
 The MIT License (MIT)
 
