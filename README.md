@@ -7,12 +7,15 @@ i3status-taskwarrior
 
 
 ## i3 Configuration
-    ## in i3status config
+    ## in i3 config
     bar {
             status_command  i3status -c ~/.config/i3/.i3status.conf | node ~/projects/js/i3status-taskwarrior/i3status-tw.js | ~/bin/i3statusphp
     }
     
 ## Examples
+    /tmp/i3status-taskwarrior $ node i3status-tw.js json
+    {"instance":"","name":"Node","color":"#fcc0cf","markup":"none","full_text":"Active:  [ 202 ] Coding ( 14 hours )"}
+
     /tmp/i3status-taskwarrior $ node i3status-tw.js 
     Active:  [ 244 ] My project ( 41 minutes )
     

@@ -33,7 +33,7 @@ function append_status(itemlist){
     var myitem  =   {
         instance: "",
         name: "Node",
-        color: "#ff0000",
+        color: "#fcc0cf",
         markup: "none",
         full_text: status
     };
@@ -42,6 +42,12 @@ function append_status(itemlist){
     return itemlist;
 }
 
+if (process.argv.length > 2 && <string>process.argv[2] == 'json') {
+    var list = [];
+    append_status(list);
+    console.log(JSON.stringify(list[0]));
+    process.exit(0);
+}
 
 if(Boolean((<any>process.stdin).isTTY))
 {
