@@ -1,4 +1,4 @@
-///<reference path='node.d.ts'/>
+#!/usr/bin/env node
 /**
  * Project: i3status-taskwarrior
  *

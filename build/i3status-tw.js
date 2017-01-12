@@ -1,10 +1,5 @@
+#!/usr/bin/env node
 "use strict";
-///<reference path='node.d.ts'/>
-/**
- * Project: i3status-taskwarrior
- *
- * @author Amado Martinez <http://amadomartinez.mx>
- */
 var tw = require("./lib/taskwarrior");
 var process = require("process");
 var moment = require("moment");

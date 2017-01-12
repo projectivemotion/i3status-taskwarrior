@@ -1,35 +1,34 @@
 i3status-taskwarrior
 ====================
-This script will print the active taskwarrior task in json or plaintext format so that it can be displayed in i3status or [i3blocks](https://github.com/vivien/i3blocks).
+This script will print the active [taskwarrior](https://taskwarrior.org/) task in json or plaintext format so that it can be displayed in [i3status](https://i3wm.org/i3status/) or [i3blocks](https://github.com/vivien/i3blocks/).
 
+## Installation
+    npm install -g i3status-taskwarrior
+    
 ## Usage
 
-    $ git clone https://github.com/projectivemotion/i3status-taskwarrior.git
-    
-    /tmp/i3status-taskwarrior $ npm install
-    
-    /tmp/i3status-taskwarrior/build $ node i3status-tw.js json
+    $ i3status-taskwarrior json
     {"instance":"","name":"Node","color":"#fcc0cf","markup":"none","full_text":"Active:  [ 244 ] My project ( 14 hours )"}
 
-    /tmp/i3status-taskwarrior/build $ node i3status-tw.js 
+    $ i3status-taskwarrior
     Active:  [ 244 ] My project ( 41 minutes )
     
-    /tmp/i3status-taskwarrior/build $ i3status -c ~/.config/i3/.i3status.conf | node i3status-tw.js 
+    $ i3status -c ~/.config/i3/.i3status.conf | i3status-taskwarrior 
 
 ## i3 Configuration
     ## in i3 config
     bar {
-            status_command  i3status -c ~/.config/i3/.i3status.conf | node ~/projects/js/i3status-taskwarrior/build/i3status-tw.js
+            status_command  i3status -c ~/.config/i3/.i3status.conf | i3status-taskwarrior
     }
     
 ## i3blocks Configuration
     [taskw]
-    command=node /path/to/i3status-taskwarrior/build/i3status-tw.js json
+    command=i3status-taskwarrior json
     interval=10
     format=json
 
 ## Building
-    npm install && tsc --project .
+    tsc --project . && npm install
 
 ## License
 The MIT License (MIT)

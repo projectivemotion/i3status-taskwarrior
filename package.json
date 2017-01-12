@@ -1,6 +1,6 @@
 {
   "name": "i3status-taskwarrior",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": "taskwarrior",
   "description": "Prints currently active taskwarrior task.",
   "homepage": "https://github.com/projectivemotion/i3status-taskwarrior",
@@ -12,7 +12,7 @@
   },
 
   "main": "./build/i3status-tw.js",
-  "bin": "./build/i3status-tw.js",
+  "bin": { "i3status-taskwarrior": "./build/i3status-tw.js" },
 
   "dependencies" : {
     "moment" : "2.16.0"
