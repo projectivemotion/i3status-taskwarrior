@@ -1,10 +1,12 @@
 i3status-taskwarrior
 ====================
-This node utility will display currently active taskwarrior task in json or plaintext format so that it can be displayed in i3status .
+This script will print the active taskwarrior task in json or plaintext format so that it can be displayed in i3status or [i3blocks](https://github.com/vivien/i3blocks).
 
 ## Usage
 
     $ git clone https://github.com/projectivemotion/i3status-taskwarrior.git
+    
+    /tmp/i3status-taskwarrior $ npm install
     
     /tmp/i3status-taskwarrior/build $ node i3status-tw.js json
     {"instance":"","name":"Node","color":"#fcc0cf","markup":"none","full_text":"Active:  [ 244 ] My project ( 14 hours )"}
@@ -20,6 +22,12 @@ This node utility will display currently active taskwarrior task in json or plai
             status_command  i3status -c ~/.config/i3/.i3status.conf | node ~/projects/js/i3status-taskwarrior/build/i3status-tw.js
     }
     
+## i3blocks Configuration
+    [taskw]
+    command=node /path/to/i3status-taskwarrior/build/i3status-tw.js json
+    interval=10
+    format=json
+
 ## Building
     npm install && tsc --project .
 

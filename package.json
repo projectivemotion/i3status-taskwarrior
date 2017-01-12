@@ -1,12 +1,19 @@
 {
   "name": "i3status-taskwarrior",
   "version": "1.0.0",
+  "keywords": "taskwarrior",
   "description": "Prints currently active taskwarrior task.",
+  "homepage": "https://github.com/projectivemotion/i3status-taskwarrior",
+
   "author" : {
     "name": "Amado Martinez",
     "email" : "amado@projectivemotion.com",
     "url" : "http://amadomartinez.mx"
   },
+
+  "main": "./build/i3status-tw.js",
+  "bin": "./build/i3status-tw.js",
+
   "dependencies" : {
     "moment" : "2.16.0"
   },
